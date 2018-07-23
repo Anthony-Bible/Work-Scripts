@@ -22,9 +22,3 @@ cmd /c net stop nxlog
 cmd /c net start nxlog
 
 netsh advfirewall firewall set rule group="Remote Administration" new enable=yes
-
-copy /y "\\file\Location\shortcut 1.lnk" "d:\%Username%\Desktop\Shortcut 1.lnk"
-copy /y "\\file\location\shortcut 2.lnk" "d:\%Username%\Desktop\Shortcut 2.lnk"
-copy /y "\\file\location\shortcut 3.lnk" "d:\%Username%\Desktop\Shortcut 3.lnk"
-
-pause
