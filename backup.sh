@@ -55,4 +55,6 @@ fi
 # Because this is a bigger file it may take some time to do depending on network traffic
 /usr/bin/scp -i /id_rsa  /tmp/backup_$todaysDate/backup_$todaysDate.tar.bz2 Copyuser@192.168.1.202:/volume1/Backups
 
+#Remove the backup file so we don't start clogging the system
+/bin/rm -rf /tmp/backup_$todaysDate/ 
 /usr/bin/logger -i Backup_Finished in: $((($(date +%s)-$start)/60)) minutes
