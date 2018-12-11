@@ -17,3 +17,6 @@ This script is created to work on proxmox 5.1. THis script is intended to automa
 This script zips all files according to a specific regex. Then it encrypts each zip file with GPG and finally uploads the files via putty scp. The script uses passwords in the upload because it was given as a parameter to our project, in theory a better and more secure option would be to use a key file and restrict access to the key file to only those who need it. 
 
 To help anonymize our clients and obsucre our internal network infrastrastrure I have renamed certain items, like folders and clients. I have also generalized commands like the sftp upload to prevent unauthorized use of the credentials. In a production enviornment you would customize the options to properly upload
+
+## Backup.sh
+This script backups up a directory and uploads it to a NAS with scp. It's best to put this in a crontab job to do daily at an optimum time. I put some options in the script that may be best for others. 
